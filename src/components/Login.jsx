@@ -119,10 +119,11 @@ function Login({clicks,setclicks}) {
           </div>
       </div>
   </div>
-  <Toaster/>
+  
 </section>
 
     }
+      <Toaster/>
    </>
   )
 }

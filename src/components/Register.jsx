@@ -117,11 +117,11 @@ function Register({clicks,setclicks}) {
           </div>
       </div>
   </div>
-  <Toaster/>
+
 </section>
 
     }
-    
+      <Toaster/>
    </>
   )
 }
