@@ -21,7 +21,6 @@ function Navbar() {
                 <li><Link to="/report" className="hover:font-bold hover:text-green-500 ">Report</Link></li>
             
                 <li onClick={()=>{window.location.reload()}}><Link to="/items" className="hover:font-bold hover:text-green-500 " >Items</Link></li>
-                {/* <li><Link to="/match" className="hover:font-bold hover:text-green-500 ">Match</Link></li> */}
             </ul>:<Handle/>
             }
         </nav>
