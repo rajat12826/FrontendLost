@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { registerAPI } from './Api'
 import axios from 'axios'
 function Register() {
@@ -82,7 +82,7 @@ function Register() {
          Register   
       </a>
       <div className="login_signUp_toggle text-white flex mb-5 ">
-                  <p onClick={(e) => switchTabs(e, "login") } className='mr-5 font-bold font-mono border-2 p-1 px-6 border-green-500 bg-green-500 rounded hover:text-green-500 hover:bg-gray-900 hover:border-none'>LOGIN</p>
+             <Link to="/login"><p className='mr-5 font-bold font-mono border-2 p-1 px-6 border-green-500 bg-green-500 rounded hover:text-green-500 hover:bg-gray-900 hover:border-none'>LOGIN</p></Link>
                   <p onClick={(e) => switchTabs(e, "register")} className='font-bold font-mono border-2 p-1 px-2 border-red-500 bg-red-500 rounded hover:text-red-500 hover:bg-gray-900 hover:border-none'>REGISTER</p>
                 </div>
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -106,6 +106,10 @@ function Register() {
                 
                  
                   <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-transparent hover:text-yellow-500 hover:font-bold  rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600">Sign Up</button>
+<<<<<<< HEAD
+=======
+                    <p onClick={()=>(navigate('/login'))}>Sign in</p>
+>>>>>>> d50a7d283621c79a969bab4c6f619c8e9e7b95e1
               </form>
           </div>
       </div>

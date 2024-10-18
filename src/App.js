@@ -19,10 +19,11 @@ function App() {
                     <Route path="/find" element={<FindForm />} />
                     <Route path="/report" element={<ReportForm />} />
                     <Route path="/login" element={<Login/>} />
-                    <Route path="/register" element={<Register />} />
+                    <Route path="/register" element={<Register/>} />
                    
 
-                   <Route path="/items" element={<Item/>}/>                </Routes>
+                   <Route path="/items" element={<Item/>}/>                
+                   </Routes>
             </div>
         </Router>
     );
