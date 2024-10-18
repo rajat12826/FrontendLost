@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 import { useNavigate } from 'react-router-dom'
-import { registerAPI } from './Api'
+import { registerAPI } from '../Api/Api'
 import axios from 'axios'
 function Register() {
     
@@ -48,7 +48,6 @@ function Register() {
        
           setLoading(true);
           navigate("/");
-            window.location.reload()
         }
         else{
           if(data.message="User already Exists"){
