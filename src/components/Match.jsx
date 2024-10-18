@@ -66,6 +66,7 @@ function Match({ data, userId }) {
        
       } catch (error) {
         console.error('Error calling similarity API:', error);
+        return(<h1 className='text-2xl font-bold'>No Item Found </h1>)
       }
     }
   }
