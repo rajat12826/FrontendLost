@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { loginAPI, registerAPI } from './Api'
 import axios from 'axios'
-function Login() {
+function Login({clicks,setclicks}) {
     
 
   const [loading ,setLoading]=useState(false)
@@ -51,6 +51,7 @@ function Login() {
        
           // setLoading(true);
           navigate("/");
+          setclicks(false)
             window.location.reload()
         }
         else{
@@ -85,10 +86,10 @@ function Login() {
          
         Login   
       </a>
-      <div className="login_signUp_toggle text-white flex mb-5 ">
+     {!clicks ?<div className="login_signUp_toggle text-white flex mb-5 ">
                   <p onClick={(e) => switchTabs(e, "login") } className='mr-5 font-bold font-mono border-2 p-1 px-6 border-green-500 bg-green-500 rounded hover:text-green-500 hover:bg-gray-900 hover:border-none'>LOGIN</p>
                   <p onClick={(e) => switchTabs(e, "register")} className='font-bold font-mono border-2 p-1 px-2 border-red-500 bg-red-500 rounded hover:text-red-500 hover:bg-gray-900 hover:border-none'>REGISTER</p>
-                </div>
+                </div>:null}
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">

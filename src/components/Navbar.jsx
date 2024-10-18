@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Login from "./Login";
 import { useNavigate } from 'react-router-dom'
 import Register from "./Register";
+import Handle from "./Handle";
 function Navbar() {
     const user=localStorage.getItem('user')
     const navigate=useNavigate()
@@ -21,7 +22,7 @@ function Navbar() {
             
                 <li onClick={()=>{window.location.reload()}}><Link to="/items" className="hover:font-bold hover:text-green-500 " >Items</Link></li>
                 <li><Link to="/match" className="hover:font-bold hover:text-green-500 ">Match</Link></li>
-            </ul>:<Register/>
+            </ul>:<Handle/>
             }
         </nav>
     );
