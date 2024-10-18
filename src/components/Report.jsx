@@ -65,12 +65,19 @@ function ReportForm(){
               <form class="space-y-  md:space-y-6 max-md:py-5 sm:py-2" action="#" onSubmit={reportSubmit}>
               
                   <div>
-                      <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lost At</label>
+                      <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Found At</label>
                       <input type="location" name="location" id="location" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required="" onChange={registerDatachange}/>
                   </div>
                   <div>
                       <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
-                      <input type="category" name="category" id="category" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}/>
+                      <select name="category" id="category" placeholder="Select catergory of item" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}>
+                        <option value = "Jewelery"> Jewelery </option>
+                        <option value = "Stationary"> Stationary </option>
+                        <option value = "Electronics"> Electronics </option>
+                        <option value = "Books"> Books </option>
+                        <option value = "Silverware"> Silverware </option>
+                        <option value = "Others"> Others </option>
+                      </select>
                   </div>
                 
                   <div>
@@ -82,7 +89,7 @@ function ReportForm(){
                       <input type="size" name="size" id="size" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}/>
                   </div>
                   <div>
-                      <label for="submittedat" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">SubmittedAt</label>
+                      <label for="submittedat" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Submitted At</label>
                       <input type="submittedat" name="submittedat" id="submittedat" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}/>
                   </div>
                   <div>

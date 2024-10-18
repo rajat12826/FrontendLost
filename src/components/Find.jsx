@@ -50,8 +50,7 @@ function FindForm(){
         <section class="bg-gray-50 h-screen dark:bg-gray-900 h-screen" >
   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-         
-        Lost Item Form  
+        Find your Item
       </a>
      
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -62,12 +61,19 @@ function FindForm(){
               <form class="space-y-4 md:space-y-6" action="#" onSubmit={reportSubmit}>
               
                   <div>
-                      <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Found At</label>
+                      <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lost At</label>
                       <input type="location" name="location" id="location" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required="" onChange={registerDatachange}/>
                   </div>
                   <div>
                       <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
-                      <input type="category" name="category" id="category" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}/>
+                      <select name="category" id="category" placeholder="Select catergory of item" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}>
+                        <option value = "Jewelery"> Jewelery </option>
+                        <option value = "Stationary"> Stationary </option>
+                        <option value = "Electronics"> Electronics </option>
+                        <option value = "Books"> Books </option>
+                        <option value = "Silverware"> Silverware </option>
+                        <option value = "Others"> Others </option>
+                      </select>
                   </div>
                 
                   <div>
