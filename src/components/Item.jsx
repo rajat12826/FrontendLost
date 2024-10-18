@@ -33,6 +33,7 @@ function Item(){
         
     }
     useEffect(()=>{
+        window.location.reload()
         getLostData();
         getFoundData();
 
