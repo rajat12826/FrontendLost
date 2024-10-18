@@ -49,7 +49,7 @@ function Login() {
        const u=localStorage.getItem('user')
        console.log(u);
        
-          setLoading(true);
+          // setLoading(true);
           navigate("/");
         }
         else{
