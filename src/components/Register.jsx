@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerAPI } from './Api'
 import axios from 'axios'
-function Register() {
+function Register({clicks,setclicks}) {
     
        
   const [loading ,setLoading]=useState(false)
