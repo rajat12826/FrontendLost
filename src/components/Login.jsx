@@ -51,6 +51,7 @@ function Login() {
        
           // setLoading(true);
           navigate("/");
+            window.location.reload()
         }
         else{
           if(data.message="User already Exists"){
