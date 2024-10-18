@@ -13,7 +13,7 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Navbar /> {/* Navbar appears on all pages */}
+                <HomePage/>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/find" element={<FindForm />} />
