@@ -9,7 +9,7 @@ function Item(){
     const[click,setClick]=useState(false)
     const[userId,setuserid]=useState()
     function getLostData(){
-     x
+     
         const user=JSON.parse(localStorage.getItem("user"));
         setuserid(user._id)
         console.log(user);
@@ -41,27 +41,27 @@ function Item(){
     },[])
     return(
        <>
-       {!click? <div id="item " className="sm:flex ">
+       {!click? <div id="item " className=" sm:flex justify-center   ">
 
-<div id="lostItems" className="bg-gray-200">
+<div id="lostItems" className="bg-gray-200 px-16">
     <h1 className="flex justify-center text-xl font-semibold pt-2">LostItems</h1>
 {
     lostdata.map((item)=>{
         return(
-            <div>
+            <div className="flex justify-center items-center">
 <Itemcard data={item} click={click} setClick={setClick} data1={data1} setData={setData}/>
             </div>
         )
     })
 }
 </div>
-<div id="foundItems" className="bg-gray-200">
-<h1 className="flex justify-center text-xl font-semibold pt-2">FoundItems</h1>
+<div id="foundItems" className="bg-gray-200 w-full ">
+<h1 className="flex justify-center text-xl font-semibold pt-2 w-full ">FoundItems</h1>
 {/* <div id="lostItems"> */}
 {
     founddata.map((item)=>{
         return(
-            <div>
+            <div className="flex justify-center items-center ">
 <Itemcard data={item} click={click} setClick={setClick}  data1={data1} setData={setData}/>
             </div>
         )

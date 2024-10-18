@@ -79,7 +79,7 @@ function Match({ data, userId }) {
       <div>
         {/* {lost ? <Itemcard data={lost} /> : <p>Loading lost item...</p>} */}
         {
-            found?<div>
+            found?<div >
                 {
             found.map((item)=>{
                 console.log(found.length);
