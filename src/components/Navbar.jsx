@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Login from "./Login";
-
+import { useNavigate } from 'react-router-dom'
 function Navbar() {
     const user=localStorage.getItem('user')
+    const navigate=useNavigate()
+  
+    const switchTabs=()=>{
+        navigate(`/login`)
+    }
     return (
         <nav>
             {
@@ -13,7 +18,7 @@ function Navbar() {
                 <li><Link to="/find" className="hover:font-bold hover:text-green-500 ">Find</Link></li>
                 <li><Link to="/report" className="hover:font-bold hover:text-green-500 ">Report</Link></li>
             
-                <li><Link to="/items" className="hover:font-bold hover:text-green-500 ">Items</Link></li>
+                <li ><Link to="/items" className="hover:font-bold hover:text-green-500 ">Items</Link></li>
                 <li><Link to="/match" className="hover:font-bold hover:text-green-500 ">Match</Link></li>
             </ul>:<Login/>
             }
