@@ -3,6 +3,7 @@ import axios from 'axios';
 import { getMatchAPI } from './Api';
 import Itemcard from './Itemcard';
 import toast from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 function Match({ data, userId }) {
   const [lost, setLost] = useState(null); 
   const [found, setFound] = useState([]); 
@@ -98,10 +99,10 @@ function Match({ data, userId }) {
      <span className="sr-only">Loading...</span>
    </div>
    </div></div>:
-      <div className='h-full '>
+      <div className='h-full  pointer-events-none'>
         {/* {lost ? <Itemcard data={lost} /> : <p>Loading lost item...</p>} */}
         {
-            found?<div >
+            found?<div>
                 {
             found.map((item)=>{
                 console.log(found.length);
@@ -113,7 +114,9 @@ function Match({ data, userId }) {
         }
         {found.length==0?<p className='text-xl font-bold flex justify-center items-center place-content-center  '>No Matching Items Found</p>:null}
       </div>
+      
 }
+<Toaster />
     </>
   );
 }

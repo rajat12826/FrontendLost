@@ -3,6 +3,7 @@ import { useState } from "react";
 import { createFoundAPI, createLostAPI } from "./Api";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { Toaster } from "react-hot-toast";
 function ReportForm(){
     
     const us=JSON.parse(localStorage.getItem("user"));
@@ -110,6 +111,7 @@ const showToastMessage = () => {
           </div>
       </div>
   </div>
+  <Toaster/>
 </section>
         )
 }

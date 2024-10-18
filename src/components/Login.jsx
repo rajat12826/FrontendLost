@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import { loginAPI, registerAPI } from './Api'
+import { Toaster } from "react-hot-toast";
 import axios from 'axios'
 function Login({clicks,setclicks}) {
   const showToastMessage = () => {
@@ -54,7 +55,9 @@ function Login({clicks,setclicks}) {
        
           // setLoading(true);
           navigate("/");
+         if(clicks){
           setclicks(false)
+         }
             window.location.reload()
         }
         else{
@@ -116,6 +119,7 @@ function Login({clicks,setclicks}) {
           </div>
       </div>
   </div>
+  <Toaster/>
 </section>
 
     }

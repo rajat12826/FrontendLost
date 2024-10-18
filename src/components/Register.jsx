@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { registerAPI } from './Api'
 import axios from 'axios'
 import toast from 'react-hot-toast'
+import { Toaster } from "react-hot-toast";
 function Register({clicks,setclicks}) {
     
   const showToastMessage = () => {
@@ -116,9 +117,11 @@ function Register({clicks,setclicks}) {
           </div>
       </div>
   </div>
+  <Toaster/>
 </section>
 
     }
+    
    </>
   )
 }
