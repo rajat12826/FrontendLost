@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { registerAPI } from './Api'
 import axios from 'axios'
-function Register({click,clicks,setclicks}) {
+function Register() {
     
        
   const [loading ,setLoading]=useState(false)
@@ -45,9 +45,10 @@ function Register({click,clicks,setclicks}) {
         if(data.success === true){
       
           localStorage.setItem("user", JSON.stringify(data.user));
-       setclicks(false)
+       
           setLoading(true);
           navigate("/");
+            window.location.reload()
         }
         else{
           if(data.message="User already Exists"){
@@ -81,10 +82,10 @@ function Register({click,clicks,setclicks}) {
          
          Register   
       </a>
-     {!clicks? <div className="login_signUp_toggle text-white flex mb-5 ">
-             <Link to="/login"><p className='mr-5 font-bold font-mono border-2 p-1 px-6 border-green-500 bg-green-500 rounded hover:text-green-500 hover:bg-gray-900 hover:border-none'>LOGIN</p></Link>
+      <div className="login_signUp_toggle text-white flex mb-5 ">
+                  <p onClick={(e) => switchTabs(e, "login") } className='mr-5 font-bold font-mono border-2 p-1 px-6 border-green-500 bg-green-500 rounded hover:text-green-500 hover:bg-gray-900 hover:border-none'>LOGIN</p>
                   <p onClick={(e) => switchTabs(e, "register")} className='font-bold font-mono border-2 p-1 px-2 border-red-500 bg-red-500 rounded hover:text-red-500 hover:bg-gray-900 hover:border-none'>REGISTER</p>
-                </div>:null}
+                </div>
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
@@ -106,7 +107,6 @@ function Register({click,clicks,setclicks}) {
                 
                  
                   <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-transparent hover:text-yellow-500 hover:font-bold  rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600">Sign Up</button>
-                    <p onClick={()=>(navigate('/login'))}>Sign in</p>
               </form>
           </div>
       </div>

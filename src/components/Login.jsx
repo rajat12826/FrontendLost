@@ -84,7 +84,7 @@ function Login({clicks,setclicks}) {
   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
          
-         Register   
+        Login   
       </a>
      {!clicks ?<div className="login_signUp_toggle text-white flex mb-5 ">
                   <p onClick={(e) => switchTabs(e, "login") } className='mr-5 font-bold font-mono border-2 p-1 px-6 border-green-500 bg-green-500 rounded hover:text-green-500 hover:bg-gray-900 hover:border-none'>LOGIN</p>
@@ -108,7 +108,6 @@ function Login({clicks,setclicks}) {
                 
                  
                   <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-transparent hover:text-yellow-500 hover:font-bold  rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600">Sign Up</button>
-=
               </form>
           </div>
       </div>
