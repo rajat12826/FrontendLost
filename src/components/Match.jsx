@@ -77,7 +77,7 @@ function Match({ data, userId }) {
 
   return (
     <>
-      <div>
+      <div className='h-full '>
         {/* {lost ? <Itemcard data={lost} /> : <p>Loading lost item...</p>} */}
         {
             found?<div >
@@ -90,6 +90,7 @@ function Match({ data, userId }) {
         }
                 </div>:<p>Loading lost item...</p>
         }
+        {found.length==0?<p className='text-xl font-bold flex justify-center items-center place-content-center  '>No Matching Items Found</p>:null}
       </div>
     </>
   );
