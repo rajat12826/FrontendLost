@@ -49,8 +49,9 @@ function Login() {
        const u=localStorage.getItem('user')
        console.log(u);
        
-          setLoading(true);
+          // setLoading(true);
           navigate("/");
+            window.location.reload()
         }
         else{
           if(data.message="User already Exists"){

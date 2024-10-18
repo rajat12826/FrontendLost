@@ -9,7 +9,7 @@ function Item(){
     const[click,setClick]=useState(false)
     const[userId,setuserid]=useState()
     function getLostData(){
-
+     x
         const user=JSON.parse(localStorage.getItem("user"));
         setuserid(user._id)
         console.log(user);
@@ -31,8 +31,10 @@ function Item(){
         
         console.log(user);
         
+        
     }
     useEffect(()=>{
+  
         getLostData();
         getFoundData();
 
