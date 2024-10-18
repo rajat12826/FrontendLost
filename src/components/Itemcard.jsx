@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Itemcard({ data, click, setClick, data1, setData }) {
+function Itemcard({ data, click, setClick, data1, setData,isclick,setclick }) {
     console.log("items", data);
 
     let submittedAt = "";
@@ -18,6 +18,7 @@ function Itemcard({ data, click, setClick, data1, setData }) {
                     <div className="bg-gray-00 rounded-lg overflow-hidden  w-full">
                     
                         <div className="py-4 px-6">
+                           {isclick?null:<div>
                             <div className="flex items-baseline">
                                 <span className={`inline-block bg-green-500 text-white py-1 px-4 text-xs rounded-full uppercase font-semibold tracking-wide`}>
                                     {data?.colour}
@@ -30,6 +31,7 @@ function Itemcard({ data, click, setClick, data1, setData }) {
                             <div className="mt-1">
                                 <span className="text-gray-700">Description: {data?.description || "No description"}</span>
                             </div>
+                            </div>}
                             <div className="mt-2 flex flex-col">
                                 <span className="text-gray-600 text-sm">Location: {data?.location || "N/A"}</span>
                                 {submittedAt && (

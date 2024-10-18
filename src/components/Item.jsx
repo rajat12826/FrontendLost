@@ -41,7 +41,9 @@ function Item(){
     },[])
     return(
        <>
-       {!click? <div id="item " className=" sm:flex justify-center   ">
+      <div className="flex justify-center bg-gray-00">
+
+      {!click? <div id="item " className=" sm:flex justify-center bg-white   ">
 
 <div id="lostItems" className="bg-gray-200 px-16">
     <h1 className="flex justify-center text-xl font-semibold pt-2">Lost Items</h1>
@@ -61,7 +63,7 @@ function Item(){
 {
     founddata.map((item)=>{
         return(
-            <div className="flex justify-center items-center ">
+            <div className="flex justify-center items-center pointer-events-none ">
 <Itemcard data={item} click={click} setClick={setClick}  data1={data1} setData={setData}/>
             </div>
         )
@@ -71,6 +73,7 @@ function Item(){
 
 </div>
 </div>:<Match data={data1} userId={userId}/>}
+      </div>
        
        </>
     );
