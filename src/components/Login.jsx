@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
-
+import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import { loginAPI, registerAPI } from './Api'
 import axios from 'axios'
 function Login({clicks,setclicks}) {
-    
+  const showToastMessage = () => {
+    toast.success("Successfully Login !");
+  };
 
   const [loading ,setLoading]=useState(false)
     const[exist,setexist]=useState(false)
@@ -47,6 +49,7 @@ function Login({clicks,setclicks}) {
           localStorage.setItem("token", data.token);
           localStorage.setItem("id", data.userId);
        const u=localStorage.getItem('user')
+       showToastMessage()
        console.log(u);
        
           // setLoading(true);
@@ -56,6 +59,7 @@ function Login({clicks,setclicks}) {
         }
         else{
           if(data.message="User already Exists"){
+            toast.error("Credential Error");
             setexist(true)
           }
         }

@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { getMatchAPI } from './Api';
 import Itemcard from './Itemcard';
-
+import toast from 'react-hot-toast';
 function Match({ data, userId }) {
   const [lost, setLost] = useState(null); 
   const [found, setFound] = useState([]); 
     const[isclick,setclick]=useState(true)
     const[loading,setloading]=useState(true)
+    const showToastMessage = () => {
+        toast.success("Successfully Match Successfully Found !");
+      };
   async function getData() {
     try {
       const data1 = await axios.post(getMatchAPI, {
@@ -64,13 +67,16 @@ function Match({ data, userId }) {
           console.log('Found items after update:', updatedFound.length);
           return updatedFound;
         });
-        setloading(false)
+        
+        showToastMessage()
        
       } catch (error) {
+        toast.error("No Match Found")
         console.error('Error calling similarity API:', error);
         return(<h1 className='text-2xl font-bold'>No Item Found </h1>)
       }
     }
+    setloading(false)
   }
 
   useEffect(() => {
