@@ -44,7 +44,7 @@ function Item(){
        {!click? <div id="item " className=" sm:flex justify-center   ">
 
 <div id="lostItems" className="bg-gray-200 px-16">
-    <h1 className="flex justify-center text-xl font-semibold pt-2">LostItems</h1>
+    <h1 className="flex justify-center text-xl font-semibold pt-2">Lost Items</h1>
 {
     lostdata.map((item)=>{
         return(
@@ -56,7 +56,7 @@ function Item(){
 }
 </div>
 <div id="foundItems" className="bg-gray-200 w-full ">
-<h1 className="flex justify-center text-xl font-semibold pt-2 w-full ">FoundItems</h1>
+<h1 className="flex justify-center text-xl font-semibold pt-2 w-full ">Found Items</h1>
 {/* <div id="lostItems"> */}
 {
     founddata.map((item)=>{
