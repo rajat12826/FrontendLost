@@ -3,9 +3,12 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerAPI } from './Api'
 import axios from 'axios'
+import toast from 'react-hot-toast'
 function Register({clicks,setclicks}) {
     
-       
+  const showToastMessage = () => {
+    toast.success("Successfully Register !");
+  };
   const [loading ,setLoading]=useState(false)
     const[exist,setexist]=useState(false)
     const navigate=useNavigate()
@@ -49,10 +52,12 @@ function Register({clicks,setclicks}) {
           setLoading(true);
           navigate("/");
             window.location.reload()
+            showToastMessage()
         }
         else{
           if(data.message="User already Exists"){
             setexist(true)
+            toast.error("Credential Error");
           }
         }
       }

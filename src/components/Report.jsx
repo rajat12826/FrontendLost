@@ -1,13 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import { createFoundAPI, createLostAPI } from "./Api";
+import toast from "react-hot-toast";
 import axios from "axios";
 function ReportForm(){
     
     const us=JSON.parse(localStorage.getItem("user"));
 //    setId(us)
 //    console.log(us._id);
-   
+const showToastMessage = () => {
+    toast.success("Successfully Created !");
+  };
     const [data,setData]=useState({
        
         location:"",
@@ -42,9 +45,10 @@ function ReportForm(){
             const response = await axios.post(createFoundAPI, reportData);
             localStorage.setItem("user", JSON.stringify(response.data.user));
             console.log(localStorage.getItem('user'));
-            
+            showToastMessage()
             console.log('Found item created:', response.data);
         } catch (error) {
+            toast.error("Error");
             console.error('Error creating found item:', error.message);
         }
     };
