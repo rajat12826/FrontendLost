@@ -6,7 +6,7 @@ import Itemcard from './Itemcard';
 function Match({ data, userId }) {
   const [lost, setLost] = useState(null); 
   const [found, setFound] = useState([]); 
-
+    const[isclick,setclick]=useState(true)
   async function getData() {
     try {
       const data1 = await axios.post(getMatchAPI, {
@@ -84,7 +84,7 @@ function Match({ data, userId }) {
             found.map((item)=>{
                 console.log(found.length);
                 
-                return <Itemcard data={item.data} key={item.similarity} />
+                return <Itemcard data={item.data} key={item.similarity} isclick={isclick}setclick={setclick}  />
             })
         }
                 </div>:<p>Loading lost item...</p>
