@@ -32,7 +32,7 @@ function HomePage() {
       </div>
 
    
-      <div class="bg-white p- rounded-lg shadow-md">
+      <div class="bg-white p-6 rounded-lg shadow-md">
         <div class="text-center">
           <h3 class="text-2xl font-bold text-indigo-600">Report Found Item</h3>
           <p class="mt-2 text-gray-600">Found something? Help return it to the rightful owner.</p>
