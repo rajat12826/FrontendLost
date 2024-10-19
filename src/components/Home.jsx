@@ -27,7 +27,7 @@ function HomePage() {
         <div class="text-center">
           <h3 class="text-2xl font-bold text-indigo-600">Report Lost Item</h3>
           <p class="mt-2 text-gray-600">Lost something? Let the university community help you find it.</p>
-          <a href="#report-lost" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Report Now</a>
+          <Link to="/report" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Report Now</Link>
         </div>
       </div>
 
@@ -36,7 +36,7 @@ function HomePage() {
         <div class="text-center">
           <h3 class="text-2xl font-bold text-indigo-600">Report Found Item</h3>
           <p class="mt-2 text-gray-600">Found something? Help return it to the rightful owner.</p>
-          <a href="#report-found" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Report Now</a>
+          <Link to="/find" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Report Now</Link>
         </div>
       </div>
     </div>
