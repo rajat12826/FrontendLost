@@ -49,11 +49,11 @@ function Register({clicks,setclicks}) {
         if(data.success === true){
       
           localStorage.setItem("user", JSON.stringify(data.user));
-       
+          showToastMessage()
           setLoading(true);
           navigate("/");
             window.location.reload()
-            showToastMessage()
+            
         }
         else{
           if(data.message="User already Exists"){
