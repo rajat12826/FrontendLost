@@ -13,7 +13,7 @@ function App() {
     return (
         <Router>
             <div className="App">
-                {/* <HomePage/> */}
+                <Navbar/>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/find" element={<FindForm />} />
