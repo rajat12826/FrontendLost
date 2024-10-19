@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Lost and Found Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application for the university community to report lost and found items on campus. Users can submit detailed information about items they have found or lost, including the category, brand, location, and identifying details. This documentation covers the application features, structure, tech stack, and development guidelines.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Installation and Setup](#installation-and-setup)
+4. [Scripts](#scripts)
+5. [Folder Structure](#folder-structure)
+6. [API Endpoints](#api-endpoints)
+7. [Styling](#styling)
+8. [Contributing](#contributing)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Report Lost Items**: Users can report items they have lost, providing details such as the category, brand, color, and location where they lost the item.
+- **Report Found Items**: Users can report found items, providing similar information along with where they submitted the item.
+- **View Items**: Users can view their reported lost and found items in the "Items" section.
+- **Search Functionality**: Users can search for items based on various filters like category, location, or keywords to match identifying details.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **Frontend**: 
+  - [React](https://reactjs.org/): JavaScript library for building user interfaces.
+  - [React Router](https://reactrouter.com/): For routing between pages.
+  - [Axios](https://axios-http.com/): For making HTTP requests to the backend API.
+  - [TailwindCSS](https://tailwindcss.com/): Utility-first CSS framework for styling.
+  
+- **Backend**: 
+  - [Node.js](https://nodejs.org/): JavaScript runtime for server-side development.
+  - [Express.js](https://expressjs.com/): Minimal web framework for building the REST API.
+  
+- **Database**: 
+  - [Prisma ORM](https://www.prisma.io/): Type-safe database access using TypeScript&#8203;:contentReference[oaicite:2]{index=2}&#8203;:contentReference[oaicite:3]{index=3}.
+  - PostgreSQL: Relational database to store item information and user reports.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+### Prerequisites
+- Node.js and npm installed
+- PostgreSQL installed and running
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/lost_and_found.git
+   cd lost_and_found
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
 
-### `npm run eject`
+3. Run development server:
+   ```bash
+   npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application at [http://localhost:3000](http://localhost:3000)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
