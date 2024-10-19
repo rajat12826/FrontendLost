@@ -92,23 +92,23 @@ function Register({clicks,setclicks}) {
                   <p onClick={(e) => switchTabs(e, "login") } className='mr-5 font-bold font-mono border-2 p-1 px-6 border-green-500 bg-green-500 rounded hover:text-green-500 hover:bg-gray-900 hover:border-none'>LOGIN</p>
                   <p onClick={(e) => switchTabs(e, "register")} className='font-bold font-mono border-2 p-1 px-2 border-red-500 bg-red-500 rounded hover:text-red-500 hover:bg-gray-900 hover:border-none'>REGISTER</p>
                 </div>:null}
-      <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+      <div class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Sign in to your account
               </h1>
               <form class="space-y-4 md:space-y-6" action="#" onSubmit={registerSubmit}>
               <div>
-                      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                      <input type="text" name="name" id="name" placeholder="enter your name" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}/>
+                      <label for="name" class="block mb-2 text-sm font-medium text-white">Name</label>
+                      <input type="text" name="name" id="name" placeholder="enter your name" class=" border  rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}/>
                   </div>
                   <div>
-                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                      <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="" onChange={registerDatachange}/>
+                      <label for="email" class="block mb-2 text-sm font-medium text-white">Your email</label>
+                      <input type="email" name="email" id="email" class=" border   rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="" onChange={registerDatachange}/>
                   </div>
                   <div>
-                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                      <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}/>
+                      <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
+                      <input type="password" name="password" id="password" placeholder="••••••••" class=" border   rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" onChange={registerDatachange}/>
                   </div>
                 
                  
